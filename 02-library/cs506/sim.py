@@ -1,17 +1,16 @@
-import math
 def euclidean_dist(x, y):
     if len(x) != len(y):
-        return "Vectors have different dimention"
+        raise ValueError("Vectors have different dimension") 
     else:
         sum = 0
         for i in range(len(x)):
             sum = sum + (x[i] - y[i])*(x[i] - y[i])
-        distance = math.sqrt(sum)
+        distance = (sum)**(1/2)
         return distance
 
 def manhattan_dist(x, y):
     if len(x) != len(y):
-        return "Vectors have different dimention"
+        raise ValueError("Vectors have different dimension") 
     else:
         sum = 0
         for i in range(len(x)):
@@ -40,7 +39,7 @@ def jaccard_dist(x, y):
 
 def cosine_sim(x, y):
     if len(x) != len(y):
-        return "Vectors have different dimention"
+        raise ValueError("Vectors have different dimension") 
     else:
         numerator = 0
         denominator_compo1 = 0
