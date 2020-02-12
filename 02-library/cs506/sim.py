@@ -49,7 +49,7 @@ def cosine_sim(x, y):
             denominator_compo1 += x[i] * x[i]
             denominator_compo2 += y[i] * y[i]
         
-        deno1_sqrt = math.sqrt(denominator_compo1)
-        deno2_sqrt = math.sqrt(denominator_compo2)
+        deno1_sqrt = (denominator_compo1)**(1/2)
+        deno2_sqrt = (denominator_compo2)**(1/2)
         sim = numerator / (deno1_sqrt * deno2_sqrt)
         return sim

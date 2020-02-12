@@ -11,4 +11,6 @@ def read_csv(csv_file_path):
         component = pair.split(',')
         sublist = [int(component[0]), int(component[1])]
         res.append(sublist)
+    
+    files.close()
     return res
